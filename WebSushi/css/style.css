@@ -1,0 +1,168 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #444;
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    background: fixed #daa520;
+    height: 3em;
+    width: 100%;
+    top: 0px;
+    z-index: 11;
+}
+.link a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: #444;
+}
+
+header h1{
+    border-radius: 40px;
+    margin: 1.2em 40% 0 41%;
+    background-color: #6e6a6a;
+    padding: 0.3em 0.5em;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 60px;
+    background-color: #daa520;
+}
+header h2{
+    display: flex;
+    justify-content: center;
+    background-color: #daa520;
+    margin: 0 23% 2em 24%;
+    height: 1.1em;
+    border-radius: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    margin: 0 auto;
+		width: 800px;
+		height: 400px;
+		overflow: hidden;
+}
+
+.slides{
+	width: 300%;
+	height: 400px;
+	display: flex;
+}
+
+.slides input{
+	display: none;
+}
+
+.slide{
+	width: -33%;
+	position: relative;
+}
+
+.slide img{
+	width: 800px;
+}
+
+.manual-navigation{
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+}
+
+.manual-btn{
+	border:  2px solid #fff;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+
+.manual-btn:hover{
+	background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+	margin-left: -33%;
+}
+
+#radio3:checked ~ .first{
+	margin-left: -66%;
+}
+
+.footer {
+		margin-top: 1em;
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+}
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+.footer__title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer__list-item {
+    list-style: none;
+}
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+.footer__list-link:hover {
+    color: #fff;
+}
+
+.company__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+}
+.company__logo {
+    color: #fff;
+}
+.company__info ul {
+    flex-direction: row;
+}
+.copyright {
+    margin-top: auto;
+}
+@media screen and (min-width: 40em) {
+    .company__info {
+        grid-column: span 2;
+    }
+}
